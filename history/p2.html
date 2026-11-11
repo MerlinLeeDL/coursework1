@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History — Part 2 | Merlin's Dalian Football Blog</title>
+    <style>
+        
+        body
+        {
+            max-width: 1080px;
+            margin: 0 auto;
+            padding: 28px;
+            background-color: #f2f6fa;
+            color: #34465b;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        img
+        {
+            max-width: 100%;
+            height: auto;
+        }
+
+        a
+        {
+            color: #225d94;
+            text-underline-offset: 4px;
+            transition: color 0.3s ease;
+        }
+
+        a:hover
+        {
+            color: #126b78;
+        }
+
+        a:focus-visible
+        {
+            outline: 3px solid #226494;
+            outline-offset: 4px;
+        }
+
+        
+        header
+        {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            padding: 24px 30px;
+            background-color: #ffffff;
+            border-top: 5px solid #247b91;
+            border-bottom: 1px solid #dce5ee;
+            border-radius: 10px 10px 0 0;
+            color: #193f69;
+        }
+
+        header img
+        {
+            width: 100px;
+            height: auto;
+            flex-shrink: 0;
+        }
+
+        header h1
+        {
+            margin: 0;
+            font-size: 30px;
+            line-height: 1.4;
+        }
+
+        h1, h2, h3
+        {
+            color: #193f69;
+            line-height: 1.4;
+        }
+
+        h2
+        {
+            margin: 32px 0 24px;
+            padding-left: 14px;
+            border-left: 5px solid #247b91;
+            font-size: 24px;
+        }
+
+        h3
+        {
+            margin: 28px 0 16px;
+            font-size: 20px;
+        }
+
+        body > p
+        {
+            max-width: 860px;
+            margin: 20px auto;
+        }
+
+        
+        .main-nav
+        {
+            margin-bottom: 28px;
+            padding: 14px 22px;
+            background-color: #ffffff;
+            border-radius: 0 0 10px 10px;
+            box-shadow: 0 4px 12px rgba(25, 63, 105, 0.06);
+        }
+
+        .main-nav ul
+        {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .main-nav li a
+        {
+            display: block;
+            padding: 8px 18px;
+            background-color: #f3f6fa;
+            border: 1px solid #dce5ee;
+            border-radius: 6px;
+            color: #294e75;
+            font-size: 15px;
+            text-decoration: none;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .main-nav li a:hover
+        {
+            background-color: #e3eff5;
+            color: #145b6b;
+            border-color: #91b9c6;
+        }
+
+        .main-nav li a[aria-current="page"]
+        {
+            background-color: #193f69;
+            border-color: #193f69;
+            color: #ffffff;
+        }
+
+        
+        .card
+        {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            flex-wrap: wrap;
+            width: 100%;
+            max-width: 860px;
+            box-sizing: border-box;
+            margin: 24px auto;
+            padding: 24px;
+            background-color: #ffffff;
+            border: 1px solid #dce5ee;
+            border-left: 4px solid #b8cfdf;
+            border-radius: 9px;
+            box-shadow: 0 3px 10px rgba(25, 63, 105, 0.05);
+            transition: box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+
+        .card:hover
+        {
+            border-left-color: #247b91;
+            box-shadow: 0 6px 18px rgba(25, 63, 105, 0.12);
+        }
+
+        .card-item
+        {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            width: 100%;
+            color: #34465b;
+            text-decoration: none;
+        }
+
+        .card-image
+        {
+            flex-shrink: 0;
+            max-width: 100%;
+        }
+
+        .card-image img
+        {
+            display: block;
+            width: 200px;
+            height: auto;
+            border-radius: 6px;
+        }
+
+        .card-info
+        {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .card p
+        {
+            margin: 0 0 12px;
+        }
+
+        .card > p
+        {
+            flex-basis: 100%;
+            margin: 0;
+        }
+
+        .card-info p:last-child
+        {
+            margin-bottom: 0;
+        }
+
+        .read-more
+        {
+            display: inline-block;
+            padding: 4px 0;
+            color: #226494;
+            font-size: 14px;
+            font-weight: bold;
+            border-bottom: 1px solid #b8cfdf;
+            transition: color 0.3s ease, border-color 0.3s ease;
+        }
+
+        .card-item:hover .read-more
+        {
+            color: #126b78;
+            border-bottom-color: #126b78;
+        }
+
+        .text-center-wrapper
+        {
+            margin: 28px 0;
+            text-align: center;
+        }
+
+        .text-center-wrapper img
+        {
+            padding: 6px;
+            box-sizing: border-box;
+            background-color: #ffffff;
+            border: 1px solid #dce5ee;
+            border-radius: 8px;
+        }
+
+        
+        body > nav ul
+        {
+            list-style: none;
+            padding: 0;
+        }
+
+        body > nav li
+        {
+            margin-bottom: 8px;
+        }
+
+        body > nav li a
+        {
+            display: inline-block;
+            padding: 7px 14px;
+            background-color: #ffffff;
+            border: 1px solid #dce5ee;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        body > nav li a:hover
+        {
+            background-color: #e3eff5;
+        }
+
+        .main-nav li
+        {
+            margin-bottom: 0;
+        }
+
+        
+        .table-container
+        {
+            max-width: 100%;
+            overflow-x: auto;
+            margin: 24px 0;
+            background-color: #ffffff;
+            border: 1px solid #dce5ee;
+            border-radius: 8px;
+        }
+
+        .custom-table, .black-border-table
+        {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        th, td
+        {
+            padding: 12px;
+            border: 1px solid #dce5ee;
+        }
+
+        th
+        {
+            background-color: #193f69;
+            color: #ffffff;
+            font-weight: normal;
+        }
+
+        tbody tr:nth-child(even)
+        {
+            background-color: #f5f8fb;
+        }
+
+        tbody tr:hover
+        {
+            background-color: #e3eff5;
+        }
+
+        footer
+        {
+            margin-top: 40px;
+            padding: 24px 16px;
+            border-top: 2px solid #c3d6e4;
+            color: #526981;
+            text-align: center;
+        }
+
+        footer p
+        {
+            margin: 4px 0;
+        }
+
+        footer a
+        {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 6px 14px;
+            background-color: #ffffff;
+            border: 1px solid #c3d6e4;
+            border-radius: 5px;
+            font-size: 14px;
+            text-decoration: none;
+        }
+
+        footer a:hover
+        {
+            background-color: #e3eff5;
+        }
+
+        
+        @media (max-width: 600px)
+        {
+            body
+            {
+                padding: 12px;
+            }
+
+            header
+            {
+                gap: 14px;
+                padding: 18px 16px;
+            }
+
+            header img
+            {
+                width: 65px;
+            }
+
+            header h1
+            {
+                font-size: 20px;
+            }
+
+            h1
+            {
+                font-size: 24px;
+            }
+
+            h2
+            {
+                margin-top: 26px;
+                font-size: 21px;
+            }
+
+            .main-nav
+            {
+                padding: 12px;
+            }
+
+            .main-nav ul
+            {
+                gap: 7px;
+            }
+
+            .main-nav li a
+            {
+                padding: 7px 10px;
+                font-size: 14px;
+            }
+
+            .card, .card-item
+            {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 18px;
+            }
+
+            .card
+            {
+                padding: 18px;
+                margin: 20px auto;
+            }
+
+            .card-image img
+            {
+                margin: 0 auto;
+            }
+
+            th, td
+            {
+                padding: 9px;
+            }
+        }
+    </style>
+</head>
+
+<body id="top">
+    <header>
+        <img src="../homepage/header.png" alt="Merlin's Blog Logo" width="200">
+        <h1 style="margin: 0;">Merlin's Blog About Dalian Football</h1>
+    </header>
+    <nav class="main-nav">
+        <ul>
+            <li><a href="../homepage/homepage.html">Home</a></li>
+            <li><a href="../legend/legend.html">Legend</a></li>
+            <li><a href="../teams/teamsnowandpast.html">Teams</a></li>
+            <li><a href="../history/history.html" aria-current="page">History</a></li>
+            <li><a href="../tifoandfans/tifoandfans.html">TIFO&Fans</a></li>
+            <li><a href="../songs/songs.html">Songs</a></li>
+            <li><a href="../author/author.html">Author</a></li>
+        </ul>
+    </nav>  
+
+    <section class="card">
+        <div class="card-image">
+            <img src="../history/p21.png" alt="p21" width="200">
+        </div>
+        <div class="card-info">
+            <p>At the end of 1993, the Chinese Football Association decided to launch commercial reforms to save the deteriorating football scene in some areas. With more and more players returning from the Liaoning provincial team to the Dalian city team, and with Wanda Group investing, Dalian Wanda Football Club was officially founded in March 1994, becoming one of the 12 inaugural teams in China's top-tier A-level league (the predecessor of the CSL).</p>
+
+        </div>
+    </section>
+
+    <section class="card">
+        <div class="card-info">
+            <p>In 1994, Dalian Wanda FC won the championship of the very first Chinese Jia-A League.</p>
+        </div>
+    </section>
+
+    <section class="card">
+        <div class="card-info">
+            <p>In 1995, Dalian Wanda FC narrowly lost 0-1 to Shanghai Shenhua in the 8th round of the league. They ended up just 2 points behind Shanghai Shenhua overall, finishing as the runner-up in that year's Chinese Jia-A League.</p>
+        </div>
+    </section>
+
+    <section class="card">
+        <div class="card-info">
+            <p>From 1996 to 1997, Dalian Wanda FC went unbeaten for 55 matches across seasons, winning two league titles and two cup championships, a legendary feat in Dalian football that can’t be replicated. Interestingly, this 55-match unbeaten streak started with a narrow 0-1 loss in the 1995 season and ended with a 2-3 defeat in the 1997 season.</p>
+        </div>
+    </section>
+
+    <section class="card">
+        <div class="card-info">
+            <p>In 1998, due to a coaching change, Dalian started off poorly. But in the last seven rounds, they grabbed 9 points in a row (back then a win counted for 2 points) and managed to overtake Shandong FC, winning both the league and the cup. At the same time, they also achieved three consecutive league and cup wins. This is considered the first and highest peak of Dalian football. On the Asian level, they also finished as runners-up. Domestically, star player Sun Jihai joined Crystal Palace in the English Championship for £400, and later moved to Manchester City.</p>
+        </div>
+    </section>
+
+    <section class="card">
+        <div class="card-info">
+            <p>In 1999, due to unfair treatment in the cup competition, they were knocked out in the semifinals. This also indirectly affected their mentality in the league, and they only finished third. At the same time, they reached the semifinals of the Asian Champions League.</p>
+        </div>
+    </section>
+
+    <section class="card">
+        <div class="card-info">
+            <p>In 2000, 100% of the team's assets were acquired by Shide, a subsidiary of the Wanda Group, and the club was renamed Dalian Wanda Shide FC. That season, they dominated with the fewest goals conceded in the history of China's professional league and a record number of goals scored at the time, finishing 10 points ahead of second-place Beijing FC and clinching the title early, achieving another double championship. They also won the Asian runner-up spot. No one expected that the next double champion title would take 25 years to arrive.</p>
+        </div>
+    </section>
+
+    <section class="card">
+        <div class="card-info">
+            <p>Won the league championship in 2001, runner-up in the cup, and made it to the AFC Champions League semifinals</p>
+        </div>
+    </section>
+
+    <section class="card">
+        <div class="card-info">
+            <p>In 2002, they won the league championship again, while finishing as runners-up in both the cup and the AFC Champions League. They achieved their second consecutive league three-peat.</p>
+        </div>
+    </section>
+
+    <section class="card">
+        <div class="card-info">
+            <p>In 2003, we were runners-up in both the League Cup and the league, and reached the semifinals in the AFC Champions League.</p>
+        </div>
+    </section>
+
+    <section class="card">
+        <div class="card-info">
+            <p>In 2004, the Jia-A League was renamed the Chinese Super League. Because the team expressed dissatisfaction with the reform at the start of the season, the Football Association deducted 6 points from them. That season, they only finished third in the league, were runners-up in the cup, and reached the semifinals of the AFC Champions League.</p>
+        </div>
+    </section>
+
+    <section class="card">
+        <div class="card-info">
+            <p>In 2005, the team won its eighth in history, and so far its last top league championship, reached the semifinals of the cup, and the semifinals of the AFC Champions League.</p>
+        </div>
+    </section>
+
+    <h3>From then on, the dynasty began to decline. Dalian football entered a long slump that lasted nearly 20 years.</h3>
+</body>
+</html>

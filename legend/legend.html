@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legends | Merlin's Dalian Football Blog</title>
+    <style>
+        
+        body
+        {
+            max-width: 1080px;
+            margin: 0 auto;
+            padding: 28px;
+            background-color: #f2f6fa;
+            color: #34465b;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        img
+        {
+            max-width: 100%;
+            height: auto;
+        }
+
+        a
+        {
+            color: #225d94;
+            text-underline-offset: 4px;
+            transition: color 0.3s ease;
+        }
+
+        a:hover
+        {
+            color: #126b78;
+        }
+
+        a:focus-visible
+        {
+            outline: 3px solid #226494;
+            outline-offset: 4px;
+        }
+
+        
+        header
+        {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            padding: 24px 30px;
+            background-color: #ffffff;
+            border-top: 5px solid #247b91;
+            border-bottom: 1px solid #dce5ee;
+            border-radius: 10px 10px 0 0;
+            color: #193f69;
+        }
+
+        header img
+        {
+            width: 100px;
+            height: auto;
+            flex-shrink: 0;
+        }
+
+        header h1
+        {
+            margin: 0;
+            font-size: 30px;
+            line-height: 1.4;
+        }
+
+        h1, h2, h3
+        {
+            color: #193f69;
+            line-height: 1.4;
+        }
+
+        h2
+        {
+            margin: 32px 0 24px;
+            padding-left: 14px;
+            border-left: 5px solid #247b91;
+            font-size: 24px;
+        }
+
+        h3
+        {
+            margin: 28px 0 16px;
+            font-size: 20px;
+        }
+
+        body > p
+        {
+            max-width: 860px;
+            margin: 20px auto;
+        }
+
+        
+        .main-nav
+        {
+            margin-bottom: 28px;
+            padding: 14px 22px;
+            background-color: #ffffff;
+            border-radius: 0 0 10px 10px;
+            box-shadow: 0 4px 12px rgba(25, 63, 105, 0.06);
+        }
+
+        .main-nav ul
+        {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .main-nav li a
+        {
+            display: block;
+            padding: 8px 18px;
+            background-color: #f3f6fa;
+            border: 1px solid #dce5ee;
+            border-radius: 6px;
+            color: #294e75;
+            font-size: 15px;
+            text-decoration: none;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .main-nav li a:hover
+        {
+            background-color: #e3eff5;
+            color: #145b6b;
+            border-color: #91b9c6;
+        }
+
+        .main-nav li a[aria-current="page"]
+        {
+            background-color: #193f69;
+            border-color: #193f69;
+            color: #ffffff;
+        }
+
+        
+        .card
+        {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            flex-wrap: wrap;
+            width: 100%;
+            max-width: 860px;
+            box-sizing: border-box;
+            margin: 24px auto;
+            padding: 24px;
+            background-color: #ffffff;
+            border: 1px solid #dce5ee;
+            border-left: 4px solid #b8cfdf;
+            border-radius: 9px;
+            box-shadow: 0 3px 10px rgba(25, 63, 105, 0.05);
+            transition: box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+
+        .card:hover
+        {
+            border-left-color: #247b91;
+            box-shadow: 0 6px 18px rgba(25, 63, 105, 0.12);
+        }
+
+        .card-item
+        {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            width: 100%;
+            color: #34465b;
+            text-decoration: none;
+        }
+
+        .card-image
+        {
+            flex-shrink: 0;
+            max-width: 100%;
+        }
+
+        .card-image img
+        {
+            display: block;
+            width: 200px;
+            height: auto;
+            border-radius: 6px;
+        }
+
+        .card-info
+        {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .card p
+        {
+            margin: 0 0 12px;
+        }
+
+        .card > p
+        {
+            flex-basis: 100%;
+            margin: 0;
+        }
+
+        .card-info p:last-child
+        {
+            margin-bottom: 0;
+        }
+
+        .read-more
+        {
+            display: inline-block;
+            padding: 4px 0;
+            color: #226494;
+            font-size: 14px;
+            font-weight: bold;
+            border-bottom: 1px solid #b8cfdf;
+            transition: color 0.3s ease, border-color 0.3s ease;
+        }
+
+        .card-item:hover .read-more
+        {
+            color: #126b78;
+            border-bottom-color: #126b78;
+        }
+
+        .text-center-wrapper
+        {
+            margin: 28px 0;
+            text-align: center;
+        }
+
+        .text-center-wrapper img
+        {
+            padding: 6px;
+            box-sizing: border-box;
+            background-color: #ffffff;
+            border: 1px solid #dce5ee;
+            border-radius: 8px;
+        }
+
+        
+        body > nav ul
+        {
+            list-style: none;
+            padding: 0;
+        }
+
+        body > nav li
+        {
+            margin-bottom: 8px;
+        }
+
+        body > nav li a
+        {
+            display: inline-block;
+            padding: 7px 14px;
+            background-color: #ffffff;
+            border: 1px solid #dce5ee;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        body > nav li a:hover
+        {
+            background-color: #e3eff5;
+        }
+
+        .main-nav li
+        {
+            margin-bottom: 0;
+        }
+
+        
+        .table-container
+        {
+            max-width: 100%;
+            overflow-x: auto;
+            margin: 24px 0;
+            background-color: #ffffff;
+            border: 1px solid #dce5ee;
+            border-radius: 8px;
+        }
+
+        .custom-table, .black-border-table
+        {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        th, td
+        {
+            padding: 12px;
+            border: 1px solid #dce5ee;
+        }
+
+        th
+        {
+            background-color: #193f69;
+            color: #ffffff;
+            font-weight: normal;
+        }
+
+        tbody tr:nth-child(even)
+        {
+            background-color: #f5f8fb;
+        }
+
+        tbody tr:hover
+        {
+            background-color: #e3eff5;
+        }
+
+        footer
+        {
+            margin-top: 40px;
+            padding: 24px 16px;
+            border-top: 2px solid #c3d6e4;
+            color: #526981;
+            text-align: center;
+        }
+
+        footer p
+        {
+            margin: 4px 0;
+        }
+
+        footer a
+        {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 6px 14px;
+            background-color: #ffffff;
+            border: 1px solid #c3d6e4;
+            border-radius: 5px;
+            font-size: 14px;
+            text-decoration: none;
+        }
+
+        footer a:hover
+        {
+            background-color: #e3eff5;
+        }
+
+        
+        @media (max-width: 600px)
+        {
+            body
+            {
+                padding: 12px;
+            }
+
+            header
+            {
+                gap: 14px;
+                padding: 18px 16px;
+            }
+
+            header img
+            {
+                width: 65px;
+            }
+
+            header h1
+            {
+                font-size: 20px;
+            }
+
+            h1
+            {
+                font-size: 24px;
+            }
+
+            h2
+            {
+                margin-top: 26px;
+                font-size: 21px;
+            }
+
+            .main-nav
+            {
+                padding: 12px;
+            }
+
+            .main-nav ul
+            {
+                gap: 7px;
+            }
+
+            .main-nav li a
+            {
+                padding: 7px 10px;
+                font-size: 14px;
+            }
+
+            .card, .card-item
+            {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 18px;
+            }
+
+            .card
+            {
+                padding: 18px;
+                margin: 20px auto;
+            }
+
+            .card-image img
+            {
+                margin: 0 auto;
+            }
+
+            th, td
+            {
+                padding: 9px;
+            }
+        }
+    </style>
+</head>
+
+<body id="top">
+    <header>
+        <img src="../homepage/header.png" alt="Merlin's Blog Logo" width="200">
+        <h1 style="margin: 0;">Merlin's Blog About Dalian Football</h1>
+    </header>
+    <nav class="main-nav">
+        <ul>
+            <li><a href="../homepage/homepage.html">Home</a></li>
+            <li><a href="../legend/legend.html" aria-current="page">Legend</a></li>
+            <li><a href="../teams/teamsnowandpast.html">Teams</a></li>
+            <li><a href="../history/history.html">History</a></li>
+            <li><a href="../tifoandfans/tifoandfans.html">TIFO&Fans</a></li>
+            <li><a href="../songs/songs.html">Songs</a></li>
+            <li><a href="../author/author.html">Author</a></li>
+        </ul>
+    </nav>  
+    <h1>This is the Dalian Football Hall of Legend</h1>
+    <h2>Players</h2>
+    <section class="card">
+        <div class="card-image">
+            <img src="../legend/hhd.png" alt="hhd" width="200">
+        </div>
+        <div class="card-info">
+            <p>Haidong Hao is one of the best strikers in the history of both Dalian and China, known as "Chinese R9"</p>
+        </div>
+
+    </section>
+
+    <section class="card">
+        <div class="card-image">
+            <img src="../legend/znh.png" alt="znh" width="200">
+        </div>
+        <div class="card-info">
+            <p>Nenhua Zhang is the captain of both Dalian and Chinese team, he is one of the best defenders in China at that time and he received many respect from not only his teammates but also his opponents.</p>
+        </div>
+
+    </section>
+
+    <section class="card">
+        <div class="card-image">
+            <img src="../legend/lm.png" alt="lm" width="200">
+        </div>
+        <div class="card-info">
+            <p>Ming Li is a legendary midfielder for Dalian, he was called "Chinese Beckham" for his exceptional long pass and handsome looking.</p>
+        </div>
+
+    </section>
+
+    <section class="card">
+        <div class="card-image">
+            <img src="../legend/sjh.png" alt="sjh" width="200">
+        </div>
+        <div class="card-info">
+            <p>Jihai Sun is one of the best football player in Chinese history, he is also a legend of the ManCity in England. He scored the very first goal of Chinese people overseas. The most famous things for him is that he stopped a 1vs4 attack by Liverpool and the successfully defeated Cristiano Ronaldo and Henry.</p>
+        </div>
+
+    </section>
+
+    <section class="card">
+        <div class="card-image">
+            <img src="../legend/cd.png" alt="cd" width="200">
+        </div>
+        <div class="card-info">
+            <p>Dong Chen is one of the best goalkeepers in the history of Dalian. He is the manager of Dalian Yingbo Football Club now.</p>
+        </div>
+
+    </section>
+
+    <section class="card">
+        <div class="card-image">
+            <img src="../legend/zt.png" alt="zt" width="200">
+        </div>
+        <div class="card-info">
+            <p>Although Ting Zhu is not a genius, he used his hardwork and dedication to become a legend of Dalian. He's also one of the few people who has been able to stand on his own through all the years of turmoil in this city. He jokingly called himself the 'watchdog of the city,' showing the inspiring spirit above his hometown.</p>
+        </div>
+
+    </section>
+
+    <section class="card">
+        <div class="card-image">
+            <img src="../legend/dfz.png" alt="dfz" width="200">
+        </div>
+        <div class="card-info">
+            <p>Fangzhuo Dong is the only Chinese player who has a champion league championship medal. He was willing to risk his entire career just to participate in the Olympics. He scored China's first goal in Olympic football, but his career was ruined as a result.</p>
+        </div>
+
+    </section>
+
+    <section class="card">
+        <div class="card-image">
+            <img src="../legend/yxc.png" alt="yxc" width="200">
+        </div>
+        <div class="card-info">
+            <p>Xiangchuan Yan severed for 3 different teams of Dalian. When Dalian Yingbo met its financial difficulties in 2022, he uesd his own savings to support the club for several weeks. He is the second coach of Dalian Yingbo Football Club team B now.</p>
+        </div>
+
+    </section>
+
+    <section class="card">
+        <div class="card-image">
+            <img src="../legend/lp.png" alt="lp" width="200">
+        </div>
+        <div class="card-info">
+            <p>Peng Lyu is the only player who has lived through 3 parts of Dalian modern footall. He served for 4 different football club in Dalian, making him a legend of the city. He is the first captain of Dalian Yingbo Football Club now.</p>
+        </div>
+
+    </section>
+
+    <section class="card">
+        <div class="card-image">
+            <img src="../legend/zt1.png" alt="zt1" width="200">
+        </div>
+        <div class="card-info">
+            <p>Ting Zhou is called "China's Pepe" because of his extremely aggressive and bloody style of playing and his hot temper. But he's always the first to stand out for his teammates. People remember him because he willingly shares the pressure with his coach and teammates when things aren't going well. He is the head coach of Dalian Yingbo Football Club B team now.</p>
+        </div>
+
+    </section>
+
+    <section class="card">
+        <div class="card-image">
+            <img src="../legend/nmqk.png" alt="nmqk" width="200">
+        </div>
+        <div class="card-info">
+            <p>Václav Němeček is a Czech former professional footballer. He is one of the first foreign player to play in China League One. He is also the captain of Czech National Team.</p>
+        </div>
+
+    </section>
+
+    <section class="card">
+        <div class="card-image">
+            <img src="../legend/azh.png" alt="azh" width="200">
+        </div>
+        <div class="card-info">
+            <p>Ahn Jung-hwan is a former South Korean professional footballer. He served his last time of his career in Dalian. Although he is a foreigner, he considered himself as a person of Dalian for he has a Dalian wife.</p>
+        </div>
+
+    </section>
+
+    <section class="card">
+        <div class="card-image">
+            <img src="../legend/lsbk.png" alt="unknown" width="200">
+        </div>
+        <div class="card-info">
+            <p>Fábio Rochemback is a Brazilian former professional footballer who played as a midfielder. He translated directly from Barcelona to Dalian, representing that Dalian first time had a world-class player.</p>
+        </div>
+
+    </section>
+
+    <section class="card">
+        <div class="card-image">
+            <img src="../legend/kt.png" alt="kt" width="200">
+        </div>
+        <div class="card-info">
+            <p>Seydou Keïta is a Malian former professional midfielder. Following Rochemback's step, he also joined Dalian and became one of the club's key players.</p>
+        </div>
+
+    </section>
+
+    <section class="card">
+        <div class="card-image">
+            <img src="../legend/mxk.png" alt="mxk" width="200">
+        </div>
+        <div class="card-info">
+            <p>Nyasha Mushekwi is a Zimbabwean professional footballer who plays as a forward. He is welcomed for his great physical fitness, archery and long career life. He still play for Dalian now even at the age of 39. He plays in Dalian Kuncheng FC in the China League One, making himself part of the city's football.</p>
+        </div>
+
+    </section>
+
+    <section class="card">
+        <div class="card-image">
+            <img src="../legend/klsk.png" alt="klsk" width="200">
+        </div>
+        <div class="card-info">
+            <p>Yannick Carrasco is a Belgian professional footballer who plays as a left midfielder. He was the peak of individual skill in Dalian's football history and truly a world-class player. Because Wanda Group acquired part of Atlético Madrid, they were able to bring him and Gaitán to Dalian during the Jinyuan era. In the Chinese Super League during the Jinyuan era, Dalian wasn’t a wealthy club, and it was almost solely thanks to Carrasco that Dalian managed to avoid relegation.</p>
+        </div>
+
+    </section>
+
+    <section class="card">
+        <div class="card-image">
+            <img src="../legend/gt.png" alt="gt" width="200">
+        </div>
+        <div class="card-info">
+            <p>Nicolás Gaitán is an Argentine professional footballer who plays as an attacking midfielder or winger.As someone who was able to make the Argentine national team and play alongside Messi, Gaitán's individual skills speak for themselves. Limited by the coach's tactics, his stats at Dalian weren't great, but his ability to switch from defense to attack and his delicate passing skills are irreplaceable, even by Carrasco.</p>
+        </div>
+
+    </section>
+
+    <section class="card">
+        <div class="card-image">
+            <img src="../legend/stq.png" alt="stq" width="200">
+        </div>
+        <div class="card-info">
+            <p>Nicolae Stanciu is a Romanian professional footballer who plays as an attacking midfielder or a winger. As the biggest-name foreign player in the post-Jin Yuan era of the Chinese Super League, Stanciu joined Wuhan in the CSL in 2022 and helped them pull off a Kaiserslautern-style miracle. After an unpleasant stint at Genoa in Serie A, Stanciu signed with Dalian this past winter. As the most high-profile foreign player in Yingbo's history, he quickly silenced doubts about his age and form, winning over the picky Dalian fans with his exquisite long shots, passing, set-piece skills, and leadership that perfectly matched the city. In this year's two Liaoning Derbies, he scored two stunning goals—using his left foot in one match and his right in the other—helping the team win both times. Before the second derby, Dalian fans even made a solo tifo for him that Messi or Ronaldo would struggle to get. Stanciu isn't the most famous foreign player in Dalian's history, but he is definitely the foreign player with the longest continuous impact. As the team's vice-captain and effectively the captain in most cases (since Peng Lyu currently doesn't play much), his pre-match pep talks and videos have become a must-watch daily for countless people in Dalian.</p>
+        </div>
+
+    </section>
+
+    <h2>Coaches</h2>
+
+    <section class="card">
+        <div class="card-image">
+            <img src="../legend/zhg.png" alt="zhg" width="200">
+        </div>
+        <div class="card-info">
+            <p>Honggen Zhang was a Chinese international football player and coach. He led the Dalian team to win the first professional league championship since the start of professional football in China.</p>
+        </div>
+
+    </section>
+
+    <section class="card">
+        <div class="card-image">
+            <img src="../legend/csb.png" alt="csb" width="200">
+        </div>
+        <div class="card-info">
+            <p>Shangbin Chi was a Chinese football player and coach. He led Dalian to win the first double championship since the professionalization of Chinese football and created the miracle of Dalian going unbeaten for 55 consecutive matches. He also led the team to win two runner-up titles.</p>
+        </div>
+
+    </section>
+
+    <section class="card">
+        <div class="card-image">
+            <img src="../legend/ks.png" alt="ks" width="200">
+        </div>
+        <div class="card-info">
+            <p>Milorad Kosanović was a Serbian football player and manager. After the Chinese Super League was restructured, Dalian's performance declined a lot due to economic and political reasons. Kosanović used his experience to help Dalian win back 2 league titles and 3 cup championships in just 5 years. His biggest contribution to Dalian was setting up a youth training base there, which has been praised as the "La Masia of China".</p>
+        </div>
+
+    </section>
+
+    <section class="card">
+        <div class="card-image">
+            <img src="../legend/lgx.png" alt="lgx" width="200">
+        </div>
+        <div class="card-info">
+            <p>Guoxu Li led the young Dalian Yingbo to accomplish the remarkable feat of three leaps in three years. Since the team was founded in 2021, he has been the head coach, up until today. Despite being the second-lowest spender in the Chinese Super League, Dalian Yingbo still holds onto the hope of winning the championship and is the only team in the league that can compete for a double crown. Guoxu Li is 100% from Dalian. He played for Dalian during his playing days and was later loaned to Boca Juniors for a year. Because the player lineup wasn't top-tier in the CSL, his initially very pragmatic defense-and-counterattack tactics were criticized as ugly. Later, as the team gelled, he increasingly pursued possession-based tactics similar to Manchester City's, achieving excellent results after the 2026 World Cup. He also mentioned himself, 'My idol is Guardiola, and I hope to play the kind of football he does.'</p>
+        </div>
+
+    </section>
+
+    <h2>Bosses</h2>
+
+    <section class="card">
+        <div class="card-image">
+            <img src="../legend/wjl.png" alt="wjl" width="200">
+        </div>
+        <div class="card-info">
+            <p>As the first-generation investor in Dalian football, he created an almost unreplicable dynasty. More than 20 years later, when Dalian football ran into trouble, he practically saved another team without worrying about the cost.</p>
+        </div>
+
+    </section>
+
+    <section class="card">
+        <div class="card-image">
+            <img src="../legend/xm.png" alt="xm" width="200">
+        </div>
+        <div class="card-info">
+            <p>As a latecomer, Ming XV invested most of his money in building a youth training base, which was undoubtedly a brilliant move. In the 2000s, he created the last peak in Dalian football so far. However, he was also criticized for interfering too much in the team's tactics and strategies, and as a businessman, his close ties with politics indirectly led to the downfall of Dalian's first-generation team.</p>
+        </div>
+
+    </section>
+
+    <section class="card">
+        <div class="card-image">
+            <img src="../legend/wk.png" alt="wk" width="200">
+        </div>
+        <div class="card-info">
+            <p>The young Dalian Yingbo faced an economic crisis shortly after it was founded. Kui Wang, who was rejected from the first generation of Dalian youth training when he was young, almost entirely out of love became the new investor in the team. His business wasn’t very big, and the future was uncertain, but he stuck with it until today, right up to the day when Dalian football is nearly revived.</p>
+        </div>
+
+    </section>
+<footer>
+    <p>Vamos Dalian!</p>
+    <p>前进吧 大连队</p>
+    <a href="#top">Back to top &uarr;</a>
+</footer>
+</body>
+</html>
