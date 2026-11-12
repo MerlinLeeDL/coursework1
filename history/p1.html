@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History — Part 1 | Merlin's Dalian Football Blog</title>
+    <style>
+        
+        body
+        {
+            max-width: 1080px;
+            margin: 0 auto;
+            padding: 28px;
+            background-color: #f2f6fa;
+            color: #34465b;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        img
+        {
+            max-width: 100%;
+            height: auto;
+        }
+
+        a
+        {
+            color: #225d94;
+            text-underline-offset: 4px;
+            transition: color 0.3s ease;
+        }
+
+        a:hover
+        {
+            color: #126b78;
+        }
+
+        a:focus-visible
+        {
+            outline: 3px solid #226494;
+            outline-offset: 4px;
+        }
+
+        
+        header
+        {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            padding: 24px 30px;
+            background-color: #ffffff;
+            border-top: 5px solid #247b91;
+            border-bottom: 1px solid #dce5ee;
+            border-radius: 10px 10px 0 0;
+            color: #193f69;
+        }
+
+        header img
+        {
+            width: 100px;
+            height: auto;
+            flex-shrink: 0;
+        }
+
+        header h1
+        {
+            margin: 0;
+            font-size: 30px;
+            line-height: 1.4;
+        }
+
+        h1, h2, h3
+        {
+            color: #193f69;
+            line-height: 1.4;
+        }
+
+        h2
+        {
+            margin: 32px 0 24px;
+            padding-left: 14px;
+            border-left: 5px solid #247b91;
+            font-size: 24px;
+        }
+
+        h3
+        {
+            margin: 28px 0 16px;
+            font-size: 20px;
+        }
+
+        body > p
+        {
+            max-width: 860px;
+            margin: 20px auto;
+        }
+
+        
+        .main-nav
+        {
+            margin-bottom: 28px;
+            padding: 14px 22px;
+            background-color: #ffffff;
+            border-radius: 0 0 10px 10px;
+            box-shadow: 0 4px 12px rgba(25, 63, 105, 0.06);
+        }
+
+        .main-nav ul
+        {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .main-nav li a
+        {
+            display: block;
+            padding: 8px 18px;
+            background-color: #f3f6fa;
+            border: 1px solid #dce5ee;
+            border-radius: 6px;
+            color: #294e75;
+            font-size: 15px;
+            text-decoration: none;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .main-nav li a:hover
+        {
+            background-color: #e3eff5;
+            color: #145b6b;
+            border-color: #91b9c6;
+        }
+
+        .main-nav li a[aria-current="page"]
+        {
+            background-color: #193f69;
+            border-color: #193f69;
+            color: #ffffff;
+        }
+
+        
+        .card
+        {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            flex-wrap: wrap;
+            width: 100%;
+            max-width: 860px;
+            box-sizing: border-box;
+            margin: 24px auto;
+            padding: 24px;
+            background-color: #ffffff;
+            border: 1px solid #dce5ee;
+            border-left: 4px solid #b8cfdf;
+            border-radius: 9px;
+            box-shadow: 0 3px 10px rgba(25, 63, 105, 0.05);
+            transition: box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+
+        .card:hover
+        {
+            border-left-color: #247b91;
+            box-shadow: 0 6px 18px rgba(25, 63, 105, 0.12);
+        }
+
+        .card-item
+        {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            width: 100%;
+            color: #34465b;
+            text-decoration: none;
+        }
+
+        .card-image
+        {
+            flex-shrink: 0;
+            max-width: 100%;
+        }
+
+        .card-image img
+        {
+            display: block;
+            width: 200px;
+            height: auto;
+            border-radius: 6px;
+        }
+
+        .card-info
+        {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .card p
+        {
+            margin: 0 0 12px;
+        }
+
+        .card > p
+        {
+            flex-basis: 100%;
+            margin: 0;
+        }
+
+        .card-info p:last-child
+        {
+            margin-bottom: 0;
+        }
+
+        .read-more
+        {
+            display: inline-block;
+            padding: 4px 0;
+            color: #226494;
+            font-size: 14px;
+            font-weight: bold;
+            border-bottom: 1px solid #b8cfdf;
+            transition: color 0.3s ease, border-color 0.3s ease;
+        }
+
+        .card-item:hover .read-more
+        {
+            color: #126b78;
+            border-bottom-color: #126b78;
+        }
+
+        .text-center-wrapper
+        {
+            margin: 28px 0;
+            text-align: center;
+        }
+
+        .text-center-wrapper img
+        {
+            padding: 6px;
+            box-sizing: border-box;
+            background-color: #ffffff;
+            border: 1px solid #dce5ee;
+            border-radius: 8px;
+        }
+
+        
+        body > nav ul
+        {
+            list-style: none;
+            padding: 0;
+        }
+
+        body > nav li
+        {
+            margin-bottom: 8px;
+        }
+
+        body > nav li a
+        {
+            display: inline-block;
+            padding: 7px 14px;
+            background-color: #ffffff;
+            border: 1px solid #dce5ee;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        body > nav li a:hover
+        {
+            background-color: #e3eff5;
+        }
+
+        .main-nav li
+        {
+            margin-bottom: 0;
+        }
+
+        
+        .table-container
+        {
+            max-width: 100%;
+            overflow-x: auto;
+            margin: 24px 0;
+            background-color: #ffffff;
+            border: 1px solid #dce5ee;
+            border-radius: 8px;
+        }
+
+        .custom-table, .black-border-table
+        {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        th, td
+        {
+            padding: 12px;
+            border: 1px solid #dce5ee;
+        }
+
+        th
+        {
+            background-color: #193f69;
+            color: #ffffff;
+            font-weight: normal;
+        }
+
+        tbody tr:nth-child(even)
+        {
+            background-color: #f5f8fb;
+        }
+
+        tbody tr:hover
+        {
+            background-color: #e3eff5;
+        }
+
+        footer
+        {
+            margin-top: 40px;
+            padding: 24px 16px;
+            border-top: 2px solid #c3d6e4;
+            color: #526981;
+            text-align: center;
+        }
+
+        footer p
+        {
+            margin: 4px 0;
+        }
+
+        footer a
+        {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 6px 14px;
+            background-color: #ffffff;
+            border: 1px solid #c3d6e4;
+            border-radius: 5px;
+            font-size: 14px;
+            text-decoration: none;
+        }
+
+        footer a:hover
+        {
+            background-color: #e3eff5;
+        }
+
+        
+        @media (max-width: 600px)
+        {
+            body
+            {
+                padding: 12px;
+            }
+
+            header
+            {
+                gap: 14px;
+                padding: 18px 16px;
+            }
+
+            header img
+            {
+                width: 65px;
+            }
+
+            header h1
+            {
+                font-size: 20px;
+            }
+
+            h1
+            {
+                font-size: 24px;
+            }
+
+            h2
+            {
+                margin-top: 26px;
+                font-size: 21px;
+            }
+
+            .main-nav
+            {
+                padding: 12px;
+            }
+
+            .main-nav ul
+            {
+                gap: 7px;
+            }
+
+            .main-nav li a
+            {
+                padding: 7px 10px;
+                font-size: 14px;
+            }
+
+            .card, .card-item
+            {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 18px;
+            }
+
+            .card
+            {
+                padding: 18px;
+                margin: 20px auto;
+            }
+
+            .card-image img
+            {
+                margin: 0 auto;
+            }
+
+            th, td
+            {
+                padding: 9px;
+            }
+        }
+    </style>
+</head>
+
+<body id="top">
+    <header>
+        <img src="../homepage/header.png" alt="Merlin's Blog Logo" width="200">
+        <h1 style="margin: 0;">Merlin's Blog About Dalian Football</h1>
+    </header>
+    <nav class="main-nav">
+        <ul>
+            <li><a href="../homepage/homepage.html">Home</a></li>
+            <li><a href="../legend/legend.html">Legend</a></li>
+            <li><a href="../teams/teamsnowandpast.html">Teams</a></li>
+            <li><a href="../history/history.html" aria-current="page">History</a></li>
+            <li><a href="../tifoandfans/tifoandfans.html">TIFO&Fans</a></li>
+            <li><a href="../songs/songs.html">Songs</a></li>
+            <li><a href="../author/author.html">Author</a></li>
+        </ul>
+    </nav>  
+
+    <section class="card">
+        <div class="card-image">
+            <img src="p11.png" alt="p4" width="200">
+        </div>
+        <div class="card-info">
+            <p>In 1921, the first Chinese football team appeared in the Dalian area—the 'Zhongqing Team,' which was formed by the progressive organization Chinese Youth Association. Soon after, other Chinese teams like the 'Longhua Team' and the 'Gonghua Team' were gradually established. </p>
+            <p>As a city colonized by Japan, the fact that these Chinese teams could beat Japan undoubtedly served as an inspiration to the locals.</p>    
+        </div>
+
+    </section>
+
+    <section class="card">
+        <div class="card-image">
+            <img src="p12.png" alt="p4" width="200">
+        </div>
+        <div class="card-info">
+            <p>After the founding of the People's Republic of China, workers at the Dalian Shipyard spontaneously formed football clubs based on each factory. Every year, they held a series of round-robin matches between the factories. They also often played friendly matches with professional teams from socialist countries like the Soviet Union and East Germany.</p>
+            <p>Unfortunately, due to certain reasons later on, during a period when controls were extremely strict, football was seen as a symbol of capitalism. At that time, this was undoubtedly a very serious issue, so football teams under the military system became the only legacy of football in Dalian.</p>    
+        </div>
+
+    </section>
+
+    <section class="card">
+        <div class="card-image">
+            <img src="p13.png" alt="p4" width="200">
+        </div>
+        <div class="card-info">
+            <p>Between 1984 and 1994, football matches in China were organized in a format similar to the Olympics. Each province competed in knockout rounds. During this period, the Liaoning provincial team, mostly made up of players from Dalian (over 80% of the team), dominated the country. They won all 10 championships over 10 years with a record of 53 wins, 8 draws, and only 2 losses. Since the team’s emblem was a tiger, Chinese people nicknamed this invincible squad the 'Northeast Tigers' in reference to the tiger’s symbolism.</p>
+            <p>In the Asian competitions representing China, in the first two years, due to a lack of experience, the Liaoning team couldn't break through the group stage of the Asian Championship. In the following eight years, they reached the quarterfinals three times, the semifinals four times, and once finished as runner-up.</p>
+        </div>
+
+    </section>
+
+
+<footer>
+    <p>Vamos Dalian!</p>
+    <p>前进吧 大连队</p>
+    <a href="#top">Back to top &uarr;</a>
+</footer>
+</body>
+</html>

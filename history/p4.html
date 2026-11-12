@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History — Part 4 | Merlin's Dalian Football Blog</title>
+    <style>
+        
+        body
+        {
+            max-width: 1080px;
+            margin: 0 auto;
+            padding: 28px;
+            background-color: #f2f6fa;
+            color: #34465b;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        img
+        {
+            max-width: 100%;
+            height: auto;
+        }
+
+        a
+        {
+            color: #225d94;
+            text-underline-offset: 4px;
+            transition: color 0.3s ease;
+        }
+
+        a:hover
+        {
+            color: #126b78;
+        }
+
+        a:focus-visible
+        {
+            outline: 3px solid #226494;
+            outline-offset: 4px;
+        }
+
+        
+        header
+        {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            padding: 24px 30px;
+            background-color: #ffffff;
+            border-top: 5px solid #247b91;
+            border-bottom: 1px solid #dce5ee;
+            border-radius: 10px 10px 0 0;
+            color: #193f69;
+        }
+
+        header img
+        {
+            width: 100px;
+            height: auto;
+            flex-shrink: 0;
+        }
+
+        header h1
+        {
+            margin: 0;
+            font-size: 30px;
+            line-height: 1.4;
+        }
+
+        h1, h2, h3
+        {
+            color: #193f69;
+            line-height: 1.4;
+        }
+
+        h2
+        {
+            margin: 32px 0 24px;
+            padding-left: 14px;
+            border-left: 5px solid #247b91;
+            font-size: 24px;
+        }
+
+        h3
+        {
+            margin: 28px 0 16px;
+            font-size: 20px;
+        }
+
+        body > p
+        {
+            max-width: 860px;
+            margin: 20px auto;
+        }
+
+        
+        .main-nav
+        {
+            margin-bottom: 28px;
+            padding: 14px 22px;
+            background-color: #ffffff;
+            border-radius: 0 0 10px 10px;
+            box-shadow: 0 4px 12px rgba(25, 63, 105, 0.06);
+        }
+
+        .main-nav ul
+        {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .main-nav li a
+        {
+            display: block;
+            padding: 8px 18px;
+            background-color: #f3f6fa;
+            border: 1px solid #dce5ee;
+            border-radius: 6px;
+            color: #294e75;
+            font-size: 15px;
+            text-decoration: none;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .main-nav li a:hover
+        {
+            background-color: #e3eff5;
+            color: #145b6b;
+            border-color: #91b9c6;
+        }
+
+        .main-nav li a[aria-current="page"]
+        {
+            background-color: #193f69;
+            border-color: #193f69;
+            color: #ffffff;
+        }
+
+        
+        .card
+        {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            flex-wrap: wrap;
+            width: 100%;
+            max-width: 860px;
+            box-sizing: border-box;
+            margin: 24px auto;
+            padding: 24px;
+            background-color: #ffffff;
+            border: 1px solid #dce5ee;
+            border-left: 4px solid #b8cfdf;
+            border-radius: 9px;
+            box-shadow: 0 3px 10px rgba(25, 63, 105, 0.05);
+            transition: box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+
+        .card:hover
+        {
+            border-left-color: #247b91;
+            box-shadow: 0 6px 18px rgba(25, 63, 105, 0.12);
+        }
+
+        .card-item
+        {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            width: 100%;
+            color: #34465b;
+            text-decoration: none;
+        }
+
+        .card-image
+        {
+            flex-shrink: 0;
+            max-width: 100%;
+        }
+
+        .card-image img
+        {
+            display: block;
+            width: 200px;
+            height: auto;
+            border-radius: 6px;
+        }
+
+        .card-info
+        {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .card p
+        {
+            margin: 0 0 12px;
+        }
+
+        .card > p
+        {
+            flex-basis: 100%;
+            margin: 0;
+        }
+
+        .card-info p:last-child
+        {
+            margin-bottom: 0;
+        }
+
+        .read-more
+        {
+            display: inline-block;
+            padding: 4px 0;
+            color: #226494;
+            font-size: 14px;
+            font-weight: bold;
+            border-bottom: 1px solid #b8cfdf;
+            transition: color 0.3s ease, border-color 0.3s ease;
+        }
+
+        .card-item:hover .read-more
+        {
+            color: #126b78;
+            border-bottom-color: #126b78;
+        }
+
+        .text-center-wrapper
+        {
+            margin: 28px 0;
+            text-align: center;
+        }
+
+        .text-center-wrapper img
+        {
+            padding: 6px;
+            box-sizing: border-box;
+            background-color: #ffffff;
+            border: 1px solid #dce5ee;
+            border-radius: 8px;
+        }
+
+        
+        body > nav ul
+        {
+            list-style: none;
+            padding: 0;
+        }
+
+        body > nav li
+        {
+            margin-bottom: 8px;
+        }
+
+        body > nav li a
+        {
+            display: inline-block;
+            padding: 7px 14px;
+            background-color: #ffffff;
+            border: 1px solid #dce5ee;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        body > nav li a:hover
+        {
+            background-color: #e3eff5;
+        }
+
+        .main-nav li
+        {
+            margin-bottom: 0;
+        }
+
+        
+        .table-container
+        {
+            max-width: 100%;
+            overflow-x: auto;
+            margin: 24px 0;
+            background-color: #ffffff;
+            border: 1px solid #dce5ee;
+            border-radius: 8px;
+        }
+
+        .custom-table, .black-border-table
+        {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        th, td
+        {
+            padding: 12px;
+            border: 1px solid #dce5ee;
+        }
+
+        th
+        {
+            background-color: #193f69;
+            color: #ffffff;
+            font-weight: normal;
+        }
+
+        tbody tr:nth-child(even)
+        {
+            background-color: #f5f8fb;
+        }
+
+        tbody tr:hover
+        {
+            background-color: #e3eff5;
+        }
+
+        footer
+        {
+            margin-top: 40px;
+            padding: 24px 16px;
+            border-top: 2px solid #c3d6e4;
+            color: #526981;
+            text-align: center;
+        }
+
+        footer p
+        {
+            margin: 4px 0;
+        }
+
+        footer a
+        {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 6px 14px;
+            background-color: #ffffff;
+            border: 1px solid #c3d6e4;
+            border-radius: 5px;
+            font-size: 14px;
+            text-decoration: none;
+        }
+
+        footer a:hover
+        {
+            background-color: #e3eff5;
+        }
+
+        
+        @media (max-width: 600px)
+        {
+            body
+            {
+                padding: 12px;
+            }
+
+            header
+            {
+                gap: 14px;
+                padding: 18px 16px;
+            }
+
+            header img
+            {
+                width: 65px;
+            }
+
+            header h1
+            {
+                font-size: 20px;
+            }
+
+            h1
+            {
+                font-size: 24px;
+            }
+
+            h2
+            {
+                margin-top: 26px;
+                font-size: 21px;
+            }
+
+            .main-nav
+            {
+                padding: 12px;
+            }
+
+            .main-nav ul
+            {
+                gap: 7px;
+            }
+
+            .main-nav li a
+            {
+                padding: 7px 10px;
+                font-size: 14px;
+            }
+
+            .card, .card-item
+            {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 18px;
+            }
+
+            .card
+            {
+                padding: 18px;
+                margin: 20px auto;
+            }
+
+            .card-image img
+            {
+                margin: 0 auto;
+            }
+
+            th, td
+            {
+                padding: 9px;
+            }
+        }
+    </style>
+</head>
+
+<body id="top">
+    <header>
+        <img src="../homepage/header.png" alt="Merlin's Blog Logo" width="200">
+        <h1 style="margin: 0;">Merlin's Blog About Dalian Football</h1>
+    </header>
+    <nav class="main-nav">
+        <ul>
+            <li><a href="../homepage/homepage.html">Home</a></li>
+            <li><a href="../legend/legend.html">Legend</a></li>
+            <li><a href="../teams/teamsnowandpast.html">Teams</a></li>
+            <li><a href="../history/history.html" aria-current="page">History</a></li>
+            <li><a href="../tifoandfans/tifoandfans.html">TIFO&Fans</a></li>
+            <li><a href="../songs/songs.html">Songs</a></li>
+            <li><a href="../author/author.html">Author</a></li>
+        </ul>
+    </nav>  
+
+    <section class="card">
+        <div class="card-image">
+            <img src="../history/p41.png" alt="p41" width="200">
+        </div>
+        <div class="card-info">
+            <p>In the 2024 season, Dalian Yingbo FC got promoted to the 2025 Chinese Super League thanks to a final streak of six consecutive wins. The last match was exactly one week after Dalian Renmin FC was dissolved, and 60,901 fans poured into Suoyuwan Stadium (formerly Dalian Renmin FC's home ground).</p>
+        </div>
+    </section>
+
+    <section class="card">
+        <div class="card-info">
+            <p>Dalian Yingbo FC is different from any Dalian team since the Arbin era, and its coach is actually a native of Dalian.</p>
+        </div>
+    </section>
+
+    <section class="card">
+        <div class="card-image">
+            <img src="../history/p42.png" alt="p42" width="200">
+        </div>
+        <div class="card-info">
+            <p>The first home game of the 2025 season saw a massive TIFO at Suoyuwan Stadium. Many big hands lifted a small hand, symbolizing that Dalian has never given up on football. In this match, Dalian defeated Changchun FC 2-0, marking the first victory since this stadium opened. Interestingly, the head coach of Changchun FC is Hui Xie.</p>
+        </div>
+    </section>
+
+    <section class="card">
+        <div class="card-info">
+            <p>This season, the team had 9 wins, 9 draws, and 12 losses, finishing 11th in the league. At the same time, they won an away game for the first time in over 2,000 days. In the 2025 season, the total attendance for the team's 15 home games in the Chinese Super League was 874,020, averaging 58,268 per game. According to Transfermarkt, the average home attendance ranks among the top twenty clubs worldwide and first in Asia, with average cheering reaching over 105 decibels. The team's vibe is very different from the old Dalian team, and you can really see it.</p>
+        </div>
+    </section>
+
+    <section class="card">
+        <div class="card-info">
+            <p>Entering 2026, the team signed the underachieving Stancu from Serie A's Genoa, the biggest-name foreign player in the club's history, and also brought in Achimpen from Henan FC.</p>
+        </div>
+    </section>
+
+    <section class="card">
+        <div class="card-info">
+            <p>In the first two rounds, because the head coach's tactics were too aggressive, we lost both games and conceded nine goals, and everyone thought we were going to repeat the same mistakes.</p>
+        </div>
+    </section>
+
+    <section class="card">
+        <div class="card-image">
+            <img src="../history/p43.png" alt="p43" width="200">
+        </div>
+        <div class="card-info">
+            <p>In the third round, playing at home against the defending champions Shanghai Port, the head coach decisively gave up on possession and focused on low-position counterattacks. The team had only 3 shots with 1 on target and 31% possession throughout the game, yet they pulled off a shocking 1-0 win against the reigning champions.</p>
+        </div>
+    </section>
+
+    <section class="card">
+        <div class="card-image">
+            <img src="../history/p44.png" alt="p44" width="200">
+        </div>
+        <div class="card-info">
+            <p>The team then went on a five-game winning streak, and in the Liaoning derby away game, Stanciu scored a stunning winner from outside the box in the 84th minute. It's worth mentioning that in this match, over 10,000 Dalian fans, without any rehearsal, created the Chinese Super League's first-ever away TIFO with their phone flashlights, completely overwhelming the home crowd in terms of atmosphere.</p>
+        </div>
+    </section>
+
+    <section class="card">
+        <div class="card-info">
+            <p>The first half is over, and Dalian is in third place. This is Dalian's best result in nearly twenty years. Even though many strong teams started with negative points, we can't deny the team's growth.</p>
+        </div>
+    </section>
+
+    <section class="card">
+        <div class="card-image">
+            <img src="../history/p45.png" alt="p45" width="200">
+        </div>
+        <div class="card-info">
+            <p>On August 8, during the second round of the Liaoning Derby, Dalian fans created the first-ever full-stadium personal TIFO in Chinese Super League history for their captain Stanciu. Stanciu transformed into a Romanian magician, with a giant dragon behind him breathing fire to devour the away team dressed in red. Cleverly, the away fans who weren’t cooperating were integrated into the TIFO, becoming part of the mockery—probably a first in history. Stanciu lived up to expectations and scored a world-class goal to secure the win.</p>
+        </div>
+    </section>
+
+    <section class="card">
+        <div class="card-info">
+            <p>On September 4th in the FA Cup, even though they had a player sent off early in the game, Dalian actually took control and won 1-0, reaching the cup semi-finals for the first time in 20 years. It's worth mentioning that it was a weekday, yet 59,000 fans still turned up at the stadium.</p>
+        </div>
+    </section>
+
+    <section class="card">
+        <div class="card-info">
+            <p>As of the time the author wrote this, Dalian Yinguo FC is ranked second in the Chinese Super League, 6 points behind the top team Chengdu Rongcheng FC with two rounds to go. They are the only team in the league this season that can theoretically still aim for the double championship. Chengdu, having failed to win in the last four rounds and missed six championship points, is in low spirits, while Dalian has been unbeaten for seven rounds, with four consecutive wins, and boosting morale by scoring 7 goals in the last two rounds. As long as Dalian beats Chengdu in their direct match this Saturday, they have a very good chance of winning the CSL this season, completing the Dalian miracle of chasing down 14 points in 5 rounds.</p>
+        </div>
+    </section>
+
+    <h2>Dalian Football Revival! Vamos Dalian!</h2>
+<footer>
+    <p>Vamos Dalian!</p>
+    <p>前进吧 大连队</p>
+    <a href="#top">Back to top &uarr;</a>
+</footer>
+</body>
+</html>

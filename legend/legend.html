@@ -426,6 +426,45 @@
                 padding: 9px;
             }
         }
+
+        /* Grouped portrait galleries: three, two, then one column. */
+        .legend-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 24px;
+            align-items: start;
+            margin: 24px 0 40px;
+        }
+        .legend-grid .card {
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            gap: 20px;
+            min-width: 0;
+            max-width: none;
+            margin: 0;
+            padding: 22px;
+            border-left: 1px solid #dce5ee;
+            border-top: 4px solid #b8cfdf;
+        }
+        .legend-grid .card:hover { border-top-color: #247b91; }
+        .legend-grid .card-image { min-width: 0; }
+        .legend-grid .card-image img {
+            width: 100%;
+            height: 220px;
+            object-fit: contain;
+            background-color: #f3f6fa;
+            margin: 0 auto;
+        }
+        .legend-grid .card-info { flex: none; overflow-wrap: anywhere; }
+        @media (max-width: 900px) {
+            .legend-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        }
+        @media (max-width: 600px) {
+            .legend-grid { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+            .legend-grid .card { padding: 20px; }
+            .legend-grid .card-image img { height: 240px; }
+        }
     </style>
 </head>
 
@@ -447,6 +486,7 @@
     </nav>  
     <h1>This is the Dalian Football Hall of Legend</h1>
     <h2>Players</h2>
+    <div class="legend-grid">
     <section class="card">
         <div class="card-image">
             <img src="../legend/hhd.png" alt="hhd" width="200">
@@ -626,8 +666,11 @@
         </div>
 
     </section>
+    </div>
+
 
     <h2>Coaches</h2>
+    <div class="legend-grid">
 
     <section class="card">
         <div class="card-image">
@@ -668,8 +711,11 @@
         </div>
 
     </section>
+    </div>
+
 
     <h2>Bosses</h2>
+    <div class="legend-grid">
 
     <section class="card">
         <div class="card-image">
@@ -700,6 +746,8 @@
         </div>
 
     </section>
+    </div>
+
 <footer>
     <p>Vamos Dalian!</p>
     <p>前进吧 大连队</p>
